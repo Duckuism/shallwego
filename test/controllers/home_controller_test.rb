@@ -6,12 +6,12 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get contact" do
+  test "should get template6" do
     get home_contact_url
     assert_response :success
   end
 
-  test "should get protfolio" do
+  test "should get template4" do
     get home_protfolio_url
     assert_response :success
   end

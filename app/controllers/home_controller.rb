@@ -1,13 +1,29 @@
 class HomeController < ApplicationController
-  def index
+  def locals
   end
 
-  def contact
+  def foreigner
   end
 
-  def protfolio
+  def template1
   end
 
-  def about
+  def template2
   end
+
+  def template3
+  end
+
+  def template4
+  end
+
+  def template5
+  end
+
+  def template6
+  end
+
+  def template7
+  end
+
 end
