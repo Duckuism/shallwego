@@ -24,17 +24,17 @@
         <section class="section--center mdl-grid site-max-width">
           <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white  mdl-shadow--4dp">
             <div class="col s12 m7">
-              <h2 class="header">Horizontal Card</h2>
+              <h4 class="header">Where is there?</h4>
               <div class="card horizontal">
                 <div class="card-image">
-                  <img src="https://lorempixel.com/100/190/nature/6">
+                  <img src="https://lh3.googleusercontent.com/MOf9Kxxkj7GvyZlTZOnUzuYv0JAweEhlxJX6gslQvbvlhLK5_bSTK6duxY2xfbBsj43H=w300">
                 </div>
                 <div class="card-stacked">
                   <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.</p>
+                    <p>Address</p>
                   </div>
                   <div class="card-action">
-                    <a href="#">This is a link</a>
+                    <a href="#">Link</a>
                   </div>
                 </div>
               </div>
@@ -43,27 +43,59 @@
           <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp">
             <div class="row">
               <form class="col s12">
+                <!--<div class="row">-->
+                  <!--<div class="input-field col s6">-->
+                    <!--<input id="input_text" type="text" data-length="10">-->
+                    <!--<label for="input_text">Input text</label>-->
+                  <!--</div>-->
+                <!--</div>-->
                 <div class="row">
-                  <div class="input-field col s6">
-                    <input id="input_text" type="text" data-length="10">
-                    <label for="input_text">Input text</label>
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 1</label>
                   </div>
                 </div>
                 <div class="row">
                   <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea1">Textarea</label>
+                    <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea2">Course 2</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea3" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea3">Course 3</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea4" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea4">Course 4</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea5" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea5">Course 5</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="textarea6" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea6">Course 6</label>
                   </div>
                 </div>
               </form>
             </div>
           </div>
+
+          <div class="row">
+            <div class="col s3">내가 만든 코스 미리보기</div>
+            <div class="col s9">이미지</div>
+          </div>
         </section>
 
-        <div class="row">
-          <div class="col s3">내가 만든 코스 미리보기</div>
-          <div class="col s9">이미지</div>
-        </div>
+
 
 
 
@@ -115,7 +147,7 @@
     background-color: white;
     height: 200px;
     text-align: center;
-    padding-top : 10px;
+    padding : 10px;
   }
   .row .col.s9 {
     width: 75%;
@@ -126,7 +158,49 @@
     background-color: white;
     height: 200px;
     text-align: center;
-    padding-top : 10px;
+    padding : 10px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    width: 100%;
+  }
+  h2 {
+    font-size: 3.56rem;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+    text-align: center;
+  }
+  .row .col.s6 {
+    width: 100%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+  }
+  .input-field {
+    position: relative;
+    margin-top: 0;
+  }
+  textarea.materialize-textarea {
+    overflow-y: hidden;
+    padding: 0;
+    resize: none;
+    min-height: 3rem;
+  }
+  h4 {
+    font-size: 2.28rem;
+    line-height: 110%;
+    margin: 1.14rem 0 .912rem 0;
+    text-align: center;
+  }
+  .container .row {
+     margin-left: 0px ;
+     margin-right: 0px ;
+  }
+  .row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
 </style>
