@@ -24,31 +24,32 @@
     </nav>
   </div>
 
+
   <main class="mdl-layout__content">
     <div class="site-content">
-
-
       <div class="mdl-grid site-max-width">
         <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
           <div class="mdl-card__title">
             <h1 class="mdl-card__title-text">외국인 소개</h1>
           </div>
-          <div class="mdl-card__media"><div class="slider">
-            <ul class="slides">
-              <li>
-                <%= image_tag('614678.jpg') %>
-              </li>
-              <li>
-                <%= image_tag('portfolio2.jpg') %>
-              </li>
-              <li>
-                <%= image_tag('portfolio3.jpg') %>
-              </li>
-              <li>
-                <%= image_tag('portfolio4.jpg') %>
-              </li>
-            </ul>
-          </div></div>
+          <div class="mdl-card__media">
+            <div class="slider">
+              <ul class="slides">
+                <li>
+                  <%= image_tag('614678.jpg') %>
+                </li>
+                <li>
+                  <%= image_tag('portfolio2.jpg') %>
+                </li>
+                <li>
+                  <%= image_tag('portfolio3.jpg') %>
+                </li>
+                <li>
+                  <%= image_tag('portfolio4.jpg') %>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="mdl-grid site-copy" id="mdl-grid">
             <div class="mdl-cell mdl-cell--12-col">
               <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
@@ -87,9 +88,14 @@
       </footer>
     </div>
   </main>
+
+
 </div>
 
 <style>
+  .parallax-container .parallax {
+    width: 100%;
+  }
   #mdl-grid {
     margin: 0;
   }
@@ -120,6 +126,8 @@
     /* text-align: left; */
   }
   .slider .slides li img {
+    border: 3px #c7c0c0 solid;
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
     border-radius: 100%;
   }
   .slider .slides {
@@ -130,5 +138,8 @@
 <script>
     $(document).ready(function(){
         $('.slider').slider();
+    });
+    $(document).ready(function(){
+        $('.parallax').parallax();
     });
 </script>
