@@ -1,9 +1,14 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="/home/contact" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">mail</i></a>
 
-  <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
-    <div class="mdl-layout__header-row site-logo-row"><span class="mdl-layout__title">
-            <div class="site-logo"></div>
-          <span class="site-description">Shall we go?</span></span></div>
+    <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
+      <div class="mdl-layout__header-row site-logo-row">
+            <span class="mdl-layout__title">
+            <div class="site-logo">
+               <%= image_tag('site-logo.png') %>
+            </div>
+            <span class="site-description">Shall we go?</span>
+            </span>
+      </div>
     <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
       <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
         <a class="mdl-navigation__link" href="/home/template1">Hang-outs</a>
@@ -15,17 +20,31 @@
         <a class="mdl-navigation__link" href="/home/template7">Message</a>
       </nav>
     </div>
+
   </header>
+
+  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+      <a class="mdl-navigation__link" href="/home/template1">Home</a>
+      <a class="mdl-navigation__link" href="/home/template1">Hang-outs</a>
+      <a class="mdl-navigation__link" href="/home/template2">Waiting foreign students</a>
+      <a class="mdl-navigation__link" href="/home/template3">Pending hang-outs</a>
+      <a class="mdl-navigation__link" href="/home/template4">Create a hang-out</a>
+      <a class="mdl-navigation__link" href="/home/template5">My account</a>
+      <a class="mdl-navigation__link" href="/home/template6">Support</a>
+      <a class="mdl-navigation__link" href="/home/template7">Message</a>
+    </nav>
+  </div>
 
   <main class="mdl-layout__content">
     <div class="site-content">
       <div class="container">
 
         <section class="section--center mdl-grid site-max-width">
-          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white  mdl-shadow--4dp">
-            <div class="col s12 m7">
-              <h4 class="header">Where is there?</h4>
-              <div class="card horizontal">
+          <header class="section__play-btn mdl-cell mdl-cell--5-col-desktop mdl-cell--3-col-tablet mdl-cell--4-col-phone mdl-shadow--4dp">
+            <div class="col s12 m7 center-align">
+              <h4 class="header" id="header">Where is there?</h4>
+              <div class="card">
                 <div class="card-image">
                   <img src="https://lh3.googleusercontent.com/MOf9Kxxkj7GvyZlTZOnUzuYv0JAweEhlxJX6gslQvbvlhLK5_bSTK6duxY2xfbBsj43H=w300">
                 </div>
@@ -40,8 +59,8 @@
               </div>
             </div>
           </header>
-          <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp">
-            <div class="row">
+          <div class="mdl-card mdl-cell mdl-cell--7-col-desktop mdl-cell--5-col-tablet mdl-cell--4-col-phone  mdl-shadow--4dp">
+            <div class="row center-align">
               <form class="col s12">
                 <!--<div class="row">-->
                   <!--<div class="input-field col s6">-->
@@ -49,52 +68,121 @@
                     <!--<label for="input_text">Input text</label>-->
                   <!--</div>-->
                 <!--</div>-->
-                <div class="row">
+                <div class="row valign-wrapper">
                   <div class="input-field col s12">
                     <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
                     <label for="textarea1">Course 1</label>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s12">
-                    <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea2">Course 2</label>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
                   </div>
                 </div>
-                <div class="row">
+                <div class="row valign-wrapper">
                   <div class="input-field col s12">
-                    <textarea id="textarea3" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea3">Course 3</label>
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 2</label>
                   </div>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
+                  </div>
+
                 </div>
-                <div class="row">
+                <div class="row valign-wrapper">
                   <div class="input-field col s12">
-                    <textarea id="textarea4" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea4">Course 4</label>
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 3</label>
                   </div>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
+                  </div>
+
                 </div>
-                <div class="row">
+                <div class="row valign-wrapper">
                   <div class="input-field col s12">
-                    <textarea id="textarea5" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea5">Course 5</label>
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 4</label>
                   </div>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
+                  </div>
+
                 </div>
-                <div class="row">
+                <div class="row valign-wrapper">
                   <div class="input-field col s12">
-                    <textarea id="textarea6" class="materialize-textarea" data-length="120"></textarea>
-                    <label for="textarea6">Course 6</label>
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 5</label>
                   </div>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
+                  </div>
+
                 </div>
+                <div class="row valign-wrapper">
+                  <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea" data-length="120"></textarea>
+                    <label for="textarea1">Course 6</label>
+                  </div>
+                  <div class="fixed-action-btn horizontal">
+                    <a class="btn-floating btn-tiny right">
+                      <i class="small material-icons">mode_edit</i>
+                    </a>
+                    <ul>
+                      <li><a class="btn-floating center-align">Edit</a></li>
+                      <li><a class="btn-floating center-align">Delete</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+                <a class="btn-floating btn-small waves-effect waves-light "><i class="material-icons">add</i></a>
+
               </form>
             </div>
           </div>
 
-          <div class="row">
-            <div class="col s3">내가 만든 코스 미리보기</div>
-            <div class="col s9">이미지</div>
-          </div>
         </section>
 
+        <section class="section--center mdl-grid site-max-width center-align">
+          <div class=" mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone" id="preivew">Preview your course</div>
+
+          <div class="mdl-card mdl-cell mdl-cell--12-col-desktop mdl-cell--12-col-tablet mdl-cell--12-col-phone  mdl-shadow--4dp">
+            <div class="row center-align">
+              <form class="col s12">
+                <div class="col s3"></div>
+              </form>
+            </div>
+          </div>
+
+        </section>
 
 
 
@@ -114,94 +202,139 @@
       </div>
     </footer>
   </main>
+
 </div>
 
 <style>
 
-  .mdl-cell--3-col, .mdl-cell--3-col-desktop.mdl-cell--3-col-desktop {
-    width: calc(50% - 16px);
+  /*.mdl-cell--3-col, .mdl-cell--3-col-desktop.mdl-cell--3-col-desktop {*/
+    /*width: calc(50% - 16px);*/
 
-  }
-  .mdl-cell--9-col, .mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {
-    width: calc(50% - 16px);
-    padding: 10px;
-  }
-  .mdl-color-text--white {
-    color: #000 !important;
-    padding: 10px;
-  }
-  .mdl-color--teal-100 {
-    background-color: rgba(255, 255, 255, 0.26) !important;
-  }
-  .mdl-color--teal-100 {
-     background-color: #ffffff !important;
-  }
-  .row .col.s3 {
-    width: 25%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-    background-color: white;
-    height: 200px;
-    text-align: center;
-    padding : 10px;
-  }
-  .row .col.s9 {
-    width: 75%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-    box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);
-    background-color: white;
-    height: 200px;
-    text-align: center;
-    padding : 10px;
-  }
-  *, *:before, *:after {
-    box-sizing: inherit;
-    width: 100%;
-  }
-  h2 {
-    font-size: 3.56rem;
-    line-height: 110%;
-    margin: 1.78rem 0 1.424rem 0;
-    text-align: center;
-  }
-  .row .col.s6 {
-    width: 100%;
-    margin-left: auto;
-    left: auto;
-    right: auto;
-  }
-  .input-field {
+  /*}*/
+  /*.mdl-cell--9-col, .mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {*/
+    /*width: calc(50% - 16px);*/
+    /*padding: 10px;*/
+  /*}*/
+  /*.mdl-color-text--white {*/
+    /*color: #000 !important;*/
+    /*padding: 10px;*/
+  /*}*/
+  /*.mdl-color--teal-100 {*/
+    /*background-color: rgba(255, 255, 255, 0.26) !important;*/
+  /*}*/
+  /*.mdl-color--teal-100 {*/
+     /*background-color: #ffffff !important;*/
+  /*}*/
+  /*.row .col.s3 {*/
+    /*width: 25%;*/
+    /*margin-left: auto;*/
+    /*left: auto;*/
+    /*right: auto;*/
+    /*box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);*/
+    /*background-color: white;*/
+    /*height: 200px;*/
+    /*text-align: center;*/
+    /*padding : 10px;*/
+  /*}*/
+  /*.row .col.s9 {*/
+    /*width: 75%;*/
+    /*margin-left: auto;*/
+    /*left: auto;*/
+    /*right: auto;*/
+    /*box-shadow: 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12), 0 2px 4px -1px rgba(0,0,0,.2);*/
+    /*background-color: white;*/
+    /*height: 200px;*/
+    /*text-align: center;*/
+    /*padding : 10px;*/
+  /*}*/
+  /**, *:before, *:after {*/
+    /*box-sizing: inherit;*/
+    /*width: 100%;*/
+  /*}*/
+  /*h2 {*/
+    /*font-size: 3.56rem;*/
+    /*line-height: 110%;*/
+    /*margin: 1.78rem 0 1.424rem 0;*/
+    /*text-align: center;*/
+  /*}*/
+  /*.row .col.s6 {*/
+    /*width: 100%;*/
+    /*margin-left: auto;*/
+    /*left: auto;*/
+    /*right: auto;*/
+  /*}*/
+  /*.input-field {*/
+    /*position: relative;*/
+    /*margin-top: 0;*/
+  /*}*/
+  /*textarea.materialize-textarea {*/
+    /*overflow-y: hidden;*/
+    /*padding: 0;*/
+    /*resize: none;*/
+    /*min-height: 3rem;*/
+  /*}*/
+  /*h4 {*/
+    /*font-size: 2.28rem;*/
+    /*line-height: 110%;*/
+    /*margin: 1.14rem 0 .912rem 0;*/
+    /*text-align: center;*/
+  /*}*/
+  /*.container .row {*/
+     /*margin-left: 0px ;*/
+     /*margin-right: 0px ;*/
+  /*}*/
+  /*.row {*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    /*margin-bottom: 20px;*/
+    /*margin-top: 20px;*/
+  /*}*/
+
+  .fixed-action-btn {
     position: relative;
-    margin-top: 0;
-  }
-  textarea.materialize-textarea {
-    overflow-y: hidden;
-    padding: 0;
-    resize: none;
-    min-height: 3rem;
-  }
-  h4 {
-    font-size: 2.28rem;
-    line-height: 110%;
-    margin: 1.14rem 0 .912rem 0;
-    text-align: center;
-  }
-  .container .row {
-     margin-left: 0px ;
-     margin-right: 0px ;
-  }
-  .row {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+
   }
 
+  .fixed-action-btn.horizontal {
+    padding: 50px 0 0 15px;
+  }
+
+  .fixed-action-btn.horizontal ul li {
+
+    margin: 50px 15px 0 0;
+  }
+  .mdl-cell--5-col-desktop.mdl-cell--5-col-desktop {
+    padding: 15px;
+  }
+  .mdl-cell--7-col-desktop.mdl-cell--7-col-desktop {
+    padding: 15px;
+  }
+  .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+     margin-right: 0px;
+  }
+
+  .btn-floating.center-align {
+    font-size:12px;
+  }
+
+  #preivew {
+    font-size:2rem;
+  }
+
+  #header{
+    font-size:2rem;
+   }
+
+  .site-navigation-row .mdl-navigation {
+
+    background-color: rgba(0,0,0,0);
+  }
 </style>
 
+<script>
+    $(document).ready(function(){
+        $('.slider').slider();
+    });
+</script>
 
             
