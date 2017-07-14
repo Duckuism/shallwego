@@ -1,4 +1,4 @@
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><a href="/home/contact" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp"><i class="material-icons">mail</i></a>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header "><a href="/home/contact" id="contact-button" class="mdl-button mdl-button--fab mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast mdl-shadow--4dp blue lighten-2 "><i class="material-icons">mail</i></a>
   <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
     <div class="mdl-layout__header-row site-logo-row">
             <span class="mdl-layout__title">
@@ -20,7 +20,7 @@
       </nav>
     </div>
   </header>
-  <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+  <div class="mdl-layout__drawer ">
     <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
       <a class="mdl-navigation__link" href="/home/template1">Home</a>
       <a class="mdl-navigation__link" href="/home/template1">Hang-outs</a>
@@ -37,60 +37,46 @@
   <main class="mdl-layout__content">
     <div class="site-content">
       <div class="mdl-grid site-max-width">
-        <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp page-content">
-          <div class="mdl-card__title">
-            <h1 class="mdl-card__title-text">외국인 소개</h1>
+
+        <div class="carousel">
+          <a class="carousel-item" href="#one!"><img src="/assets/site-logo2.png"></a>
+          <a class="carousel-item" href="#two!"><img src="/assets/site-logo2.png"></a>
+          <a class="carousel-item" href="#three!"><img src="/assets/site-logo2.png"></a>
+          <a class="carousel-item" href="#four!"><img src="/assets/site-logo2.png"></a>
+          <a class="carousel-item" href="#five!"><img src="/assets/site-logo2.png"></a>
+        </div>
+
+      </div>
+      <div class = "row">
+        <div class="col s6 offset-s3 z-depth-2">
+          <!--<div class="divider col s12"></div>-->
+          <div class="section col s12">
+            <h5> 외국인 프로필 1</h5>
+            <p> 내용 </p>
           </div>
-          <div class="mdl-card__media">
-            <div class="slider">
-              <ul class="slides">
-                <li>
-                  <%= image_tag('614678.jpg') %>
-                </li>
-                <li>
-                  <%= image_tag('portfolio2.jpg') %>
-                </li>
-                <li>
-                  <%= image_tag('portfolio3.jpg') %>
-                </li>
-                <li>
-                  <%= image_tag('portfolio4.jpg') %>
-                </li>
-              </ul>
-            </div>
+          <!--<div class ="divider col s12"></div>-->
+          <div class="section col s12">
+            <h5> 외국인 프로필 1</h5>
+            <p> 내용 </p>
           </div>
-          <div class="mdl-grid site-copy" id="mdl-grid">
-            <div class="mdl-cell mdl-cell--12-col">
-              <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">Introduction</h3>
-              <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                <p>프로필 내용</p>
-              </div>
-
-
-              <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">원하는 테마</h3>
-              <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                <p>어떤 테마</p>
-              </div>
-
-
-              <h3 class="mdl-cell mdl-cell--12-col mdl-typography--headline">기본 정보</h3>
-              <div class="mdl-cell mdl-cell--8-col mdl-card__supporting-text no-padding ">
-                <p> 테마</p>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="mdl-grid__footer">
-            <a class="waves-effect waves-light btn">Hang-out Suggest</a>
+          <!--<div class ="divider col s12"></div>-->
+          <div class="section col s12">
+            <h5> 외국인 프로필 1</h5>
+            <p> 내용 </p>
           </div>
         </div>
+
+      </div>
+      <div class="row center-align">
+        <button class="btn waves-effect waves-light blue lighten-2" type="submit" name="action">Sugeest your hang-out course
+          <i class="material-icons right ">send</i>
+        </button>
       </div>
 
-      <footer class="mdl-mini-footer">
-        <div class="footer-container">
-          <div class="mdl-logo">&copy; Unitiled. Design: <a href="https://templateflip.com/" target="_blank">TemplateFlip</a></div>
-          <ul class="mdl-mini-footer__link-list">
+      <footer class="mdl-mini-footer blue-text text-darken-2 white">
+        <div class="footer-container blue-text text-darken-2">
+          <div class="mdl-logo blue-text text-darken-2">&copy; Unitiled. Design: <a href="https://templateflip.com/" target="_blank" class="blue-text text-darken-2">TemplateFlip</a></div>
+          <ul class="mdl-mini-footer__link-list blue-text text-darken-2">
             <li><a href="#">Privacy & Terms</a></li>
           </ul>
         </div>
@@ -146,6 +132,10 @@
 
     background-color: rgba(0,0,0,0);
   }
+  .row .col.offset-s3 {
+
+    padding: 20px;
+  }
 </style>
 
 <script>
@@ -155,4 +145,8 @@
     $(document).ready(function(){
         $('.parallax').parallax();
     });
-<!--</script>-->
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+
+    <!--</script>-->
