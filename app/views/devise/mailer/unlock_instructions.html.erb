@@ -1,0 +1,6 @@
+<p>안녕하세요 <%= @resource.name %>님! Shall We Go!입니다.</p>
+
+<p>현재 <%= @resource.name %>님의 계정은 로그회인에 5회 실패하여 잠긴 상태입니다.</p>
+<p>계정잠금을 해제하려면 다음의 링크를 눌러주세요:</p>
+
+<p><%= link_to '계정 잠금해제', unlock_url(@resource, unlock_token: @token) %></p>
