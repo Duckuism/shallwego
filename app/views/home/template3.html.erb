@@ -22,7 +22,13 @@
       </div>
       <div class="demo-card-event mdl-cell mdl-card mdl-shadow--4dp event-card portfolio-card">
         <div class="mdl-card__title mdl-card--expand">
-
+          <ol>
+            <% @course.locations.each do |l| %>
+                <li>
+                  <input type="button" class="place" id="<%=l.place_id%>" value="<%= l.name %>">
+                </li>
+            <% end %>
+          </ol>
         </div>
       </div>
     </section>
@@ -33,6 +39,10 @@
       </div>
       <div class="mdl-card__supporting-text">
         <p>지도 요약</p>
+
+        <!--지도-->
+        <div id="map"></div>
+
       </div>
     </div>
 
@@ -98,6 +108,15 @@
   .mdl-layout__header-row{
     background-color: white;
   }
+
+  /*지도 height 없으면 지도 사라짐*/
+  #map {
+    height: 50%;
+    width: 50%;
+    border: solid 1px;
+    min-height: 300px;
+    min-width: 300px;
+  }
 </style>
 
 
@@ -105,4 +124,59 @@
     $(document).ready(function(){
         $('.slider').slider();
     });
+
+    //지도
+    var map;
+    var geocoder;
+    var infowindows;
+    var marker;
+
+    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 16,
+            center: {lat: 37.449610, lng: 126.653084}
+        });
+        geocoder = new google.maps.Geocoder;
+        infowindow = new google.maps.InfoWindow;
+    }
+
+    $(document).on('click', '.place', function geocodePlaceId() {
+        var placeId = $(this).attr("id");
+        var placeName = $(this).attr("value");
+        geocoder.geocode({'placeId': placeId}, function (results, status) {
+            if (status === 'OK') {
+                if (results[0]) {
+                    map.setZoom(16);
+                    map.setCenter(results[0].geometry.location);
+
+                    if(marker != undefined) {
+                        marker.setMap(null);
+                    }
+                    marker = new google.maps.Marker({
+                        map: map,
+                        position: results[0].geometry.location
+                    });
+
+                    var address = '';
+                    if (results[0].address_components) {
+                        address = [
+                            (results[0].address_components[0] && results[0].address_components[0].short_name || ''),
+                            (results[0].address_components[1] && results[0].address_components[1].short_name || ''),
+                            (results[0].address_components[2] && results[0].address_components[2].short_name || '')
+                        ].join(' ');
+                    }
+                    //정보 표시
+                    infowindow.setContent('<div><strong>' + placeName + '</strong><br>' + address);
+                    infowindow.open(map, marker);
+                } else {
+                    window.alert('No results found');
+                }
+            } else {
+                window.alert('Geocoder failed due to: ' + status);
+            }
+        });
+    });
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARFVHKNuUhIbya3S0o0ieuYUI0q5OHz_I&callback=initMap">
 </script>

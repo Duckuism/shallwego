@@ -6,12 +6,14 @@ class HomeController < ApplicationController
   end
 
   def template1
+    @courses = Course.all
   end
 
   def template2
   end
 
   def template3
+    @course = Course.find(params[:id])
   end
 
   def template4

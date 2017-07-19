@@ -1,3 +1,9 @@
+<% @courses.each do|c|%>
+    <%=c.title%>
+    <a href="home/template3/<%=c.id%>">확인</a>
+    <br>
+<% end %>
+
 <main class="mdl-layout__content">
   <div class="site-content">
     <div class="container">

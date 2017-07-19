@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   get '/home/template2' => 'home/template2'
 
-  get '/home/template3' => 'home/template3'
+  #get '/home/template3' => 'home/template3'
 
   get '/home/template4' => 'home/template4'
 
@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get '/home/template7' => 'home/template7'
 
   post 'home/create_course'
+
+  get 'home/template3/:id' => 'home#template3'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
