@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   root 'home#template1'
 
   get '/home/template1' => 'home/template1'

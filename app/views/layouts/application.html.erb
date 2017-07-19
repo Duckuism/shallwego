@@ -28,24 +28,25 @@
     <i class="material-icons">mail</i>
   </a>
 
-
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%if user_signed_in?%>
+      <a href="/users/sign_out" data-method="delete" data-confirm="로그아웃 하시겠습니까?">로그아웃</a>
+      <a href="/users/edit"><%=current_user.name%></a>
+  <%else%>
+      <a href="/users/sign_in">로그인</a>
+      <a href="/users/sign_up">회원가입</a>
+  <%end%>
 
   <header class="mdl-layout__header mdl-layout__header--waterfall site-header">
-
-
     <div class="mdl-layout__header-row site-logo-row">
-
-            <span class="mdl-layout__title">
-
-            <div class="site-logo">
-               <%= image_tag('site-logo.png') %>
-            </div>
-
-            <span class="site-description">Shall we go?</span>
-
-            </span>
+      <span class="mdl-layout__title">
+        <div class="site-logo">
+          <%= image_tag('site-logo.png') %>
+        </div>
+        <span class="site-description">Shall we go?</span>
+      </span>
     </div>
-
 
     <div class="mdl-layout__header-row site-navigation-row mdl-layout--large-screen-only">
       <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">

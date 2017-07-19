@@ -12,4 +12,20 @@ module ShallwegoFront
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
   end
+  module SHALLWEGO
+    class Application < Rails::Application
+      # Settings in config/environments/* take precedence over those specified here.
+      # Application configuration should go into files in config/initializers
+      # -- all .rb files in that directory are automatically loaded.
+      ActionMailer::Base.smtp_settings = {
+          :address    => 'smtp.gmail.com',
+          :domain     =>  'mail.google.com',
+          :port       =>  587,
+          :user_name  =>  'jeon9435',
+          :password   =>  'aa461554',
+          :authentication =>  'login',
+          :enable_starttls_auto => true
+      }
+    end
+  end
 end
