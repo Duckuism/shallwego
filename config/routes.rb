@@ -17,5 +17,7 @@ Rails.application.routes.draw do
 
   get '/home/template7' => 'home/template7'
 
+  post 'home/create_course'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
