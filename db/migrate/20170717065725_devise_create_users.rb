@@ -11,6 +11,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.0]
       t.string :from,               null: false, default: ""
       t.text :introduce,            null: false, default: ""
       # 소개
+
       ## Recoverable
       t.string   :reset_password_token
       t.datetime :reset_password_sent_at
