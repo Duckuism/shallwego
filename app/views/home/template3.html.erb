@@ -36,6 +36,9 @@
       </div>
     </div>
 
+    <!-- 댓글 구현 -->
+    <div class="site-max-width" id="disqus_thread"></div>
+
     <div class="site-max-button">
       <a class="mdl-button mdl-button--raised mdl-js-button mdl-js-ripple-effect mdl-button--accent blue lighten-2" href="#">Join</a>
     </div>
@@ -105,4 +108,14 @@
     $(document).ready(function(){
         $('.slider').slider();
     });
+
+    /* 댓글 구현 */
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://shallwego.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
 </script>
+<!-- 댓글 구현 -->
+<script id="dsq-count-scr" src="//shallwego.disqus.com/count.js" async></script>

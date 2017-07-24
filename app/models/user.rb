@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable, :lockable, :timeoutable
 
-  # user-like 관계 설정 및 함수 선언 - 수환
+  # user-like 관계 설정 및 함수 선언 [수환]
   has_many :likes
   has_many :liked_posts, through: :likes, source: :course
 
